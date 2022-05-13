@@ -1,10 +1,29 @@
+import { useState } from "react";
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 export default function App() {
+
+  const [name, setName] = useState('John')
+  const [age, setAge] = useState('21')
+
   return (
     <View style={styles.container}>
-      <Text style={styles.textField}>Open up App.js to start working on your app!</Text>
+      <Text>My name is {name} </Text>
+      <Text>Type your name:</Text>
+      <TextInput
+        onChangeText={(val) => setName(val)}
+        style={styles.input}
+        placeholder='e.g Ted'/>
+
+      <Text>My age is {age} </Text>
+      <Text>Type your Age:</Text>
+      <TextInput 
+        onChangeText={(val) => setAge(val)}
+        style={styles.input}
+        placeholder='e.g 23'
+      />
+
       <StatusBar style="auto" />
     </View>
   );
@@ -13,12 +32,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
-
-  textField : {
-    color: 'white',
+  input: {
+    borderWidth: 1,
+    borderColor: 'red',
+    padding: 5,
+    width: 120,
   }
 });
