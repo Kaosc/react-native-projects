@@ -1,5 +1,6 @@
 import React from 'react'
 import { createStackNavigator } from "@react-navigation/stack";
+import Constants from 'expo-constants'
 
 import Home from "../screens/Home";
 import ReviewDetails from "../screens/Reviewdetails";
@@ -19,7 +20,7 @@ export default function HomeStack() {
                         component={Home}
                     />
                     <Stack.Screen
-                        options={{headerTitle: 'Review Details'}} 
+                        options={{headerTitle: 'Review Details', headerStyle: {marginTop: 35 }}} 
                         name="ReviewDetails" 
                         component={ReviewDetails}
                     />

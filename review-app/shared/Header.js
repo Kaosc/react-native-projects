@@ -9,10 +9,12 @@ export default function Header({ navigation, titleName }) {
   }
 
   return (
-    <View style={styles.header}>
-      <MaterialIcons style={styles.icon} name="menu" size={24} color="black" onPress={openMenu}/>
-      <Text style={styles.headerText}>{titleName}</Text>
-    </View>
+      <View style={styles.header}>
+        <View style={styles.header}>
+          <MaterialIcons style={styles.icon} name="menu" onPress={openMenu}/>
+          <Text style={styles.headerText}>{titleName}</Text>
+        </View>
+      </View>
   )
 }
 
@@ -28,16 +30,15 @@ const styles = StyleSheet.create({
     headerText: {
       fontWeight: 'bold',
       fontSize: 21,
-      color: '#333',
       letterSpacing: 1,
-      paddingLeft: 40,
-      left: 0,
+      paddingLeft: 45,
       paddingBottom: 2,
     },
 
     icon: {
+      fontSize: 30,
+      color:"black",
       position: 'absolute',
-      width: 60,
       zIndex: 3,
     }
 

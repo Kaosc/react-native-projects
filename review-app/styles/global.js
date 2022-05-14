@@ -10,7 +10,7 @@ export const globalStyles = StyleSheet.create({
     titleText : {
         fontFamily: 'source-bold',
         fontSize: 17,
-        color: '#333'
+        color: '#333',
     },
 
     paragraph: {

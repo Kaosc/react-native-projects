@@ -10,7 +10,7 @@ const Drawer = createDrawerNavigator();
 export default function DrawerNavigator() {
     return (
         <NavigationContainer>
-            <Drawer.Navigator screenOptions={{headerShown: false}}>
+            <Drawer.Navigator screenOptions={{headerShown: false, swipeEnabled: false, }}>
                 <Drawer.Group>
                     <Drawer.Screen
                         name="Home" 
