@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
+
 import AppNavigator from './routes/Drawer';
 
 const getFonts = () => Font.loadAsync({
@@ -19,6 +20,7 @@ export default function App() {
     return ( <AppNavigator/> );
 
   } else {
+    
     return (
 
       <AppLoading

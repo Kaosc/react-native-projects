@@ -1,10 +1,8 @@
 import React from 'react'
 import { createStackNavigator } from "@react-navigation/stack";
-import Constants from 'expo-constants'
 import Home from "../screens/Home";
 import ReviewDetails from "../screens/Reviewdetails";
 import Header from '../shared/Header';
-import { StatusBar } from 'react-native';
 
 const Stack = createStackNavigator()
 
@@ -16,7 +14,6 @@ const tabStyle = {
 
 export default function HomeStack() {
     return (
-        
         <Stack.Navigator initialRouteName="Home">
             <Stack.Screen 
                 options={({ navigation }) => {

@@ -12,6 +12,7 @@ export default function FlatButton({ text, onPress }) {
 }
 
 const styles = StyleSheet.create({
+
     container: {
         shadowColor: 'white',
         shadowOffset: {width: 1, height: 1},
@@ -35,4 +36,5 @@ const styles = StyleSheet.create({
         fontSize: 17,
         textAlign: 'center',
     }
+    
 })

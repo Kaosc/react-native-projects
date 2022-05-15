@@ -23,6 +23,9 @@ export const globalStyles = StyleSheet.create({
     paragraph: {
         marginVertical: 7,
         lineHeight: 21,
+        fontSize: 15,
+        color: 'white',
+        fontFamily: 'source-regular',
     },
 
     input: {
@@ -40,7 +43,6 @@ export const globalStyles = StyleSheet.create({
         marginBottom: 15,
     }
 });
-
 
 export const images = {
     ratings: {

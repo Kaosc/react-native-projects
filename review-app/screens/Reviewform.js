@@ -1,8 +1,9 @@
 import React from 'react';
-import { globalStyles } from '../styles/global';
-import { View, Text, TextInput, Button } from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 import { Formik } from 'formik';
 import * as yup from 'yup';
+
+import { globalStyles } from '../styles/global';
 import FlatButton from '../shared/Button';
 
 const reviewSchema = yup.object({
@@ -62,6 +63,7 @@ export default function ReviewForm({ addReview }) {
                         
                     </View>
                 )}
+                
             </Formik>
         </View>
     )

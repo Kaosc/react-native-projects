@@ -5,9 +5,9 @@ import 'react-native-get-random-values'
 import { nanoid } from 'nanoid'
 
 import { globalStyles } from '../styles/global';
-import Card from '../shared/Card';
 import { MaterialIcons } from '@expo/vector-icons'
 import ReviewForm from './Reviewform';
+import Card from '../shared/Card';
 
 export default function Home({ navigation }) {
 
@@ -18,6 +18,11 @@ export default function Home({ navigation }) {
     ]);
 
     const [modalOpen, setModelOpen] = useState(false)
+
+    function deleteReview(id) {
+        const newArr = reviews.filter((item) => item.key !== id)
+        setReviews(newArr)
+    }
 
     function addReview(review) {
         review.key = nanoid();
@@ -44,21 +49,20 @@ export default function Home({ navigation }) {
             <FlatList
                 data={reviews}
                 renderItem={({item}) => (
-                    <TouchableOpacity  onPress={() => {navigation.navigate('ReviewDetails', {item})}}>
+                    <TouchableOpacity  onPress={() => {navigation.navigate('ReviewDetails', {item, delete: () => deleteReview(item.key)})}}>
                         <Card>
                             <Text style={globalStyles.titleText}>{item.title}</Text>
                         </Card>
                     </TouchableOpacity>
                 )}
             />
+
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    modelContainer : {
-    }, 
-
+    
     modelToggle : {
         marginBottom: 10,
         borderWidth: 1,
