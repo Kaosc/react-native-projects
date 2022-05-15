@@ -7,17 +7,20 @@ import AboutStack from './AboutStack';
 
 const Drawer = createDrawerNavigator();
 
+const drawerStyles = {
+    headerShown: false, 
+    swipeEnabled: false, 
+    drawerActiveTintColor: 'white',
+    drawerInactiveTintColor: '#363636',
+    drawerStyle: {backgroundColor: 'black'}
+}
+
 export default function DrawerNavigator() {
     return (
         <NavigationContainer>
-            <Drawer.Navigator screenOptions={{
-                headerShown: false, 
-                swipeEnabled: false, 
-                drawerActiveTintColor: 'white',
-                drawerInactiveTintColor: '#363636',
-                drawerStyle: {backgroundColor: 'black'}}}>
+            <Drawer.Navigator screenOptions={drawerStyles}>
                     <Drawer.Screen 
-                        name="Home" 
+                        name="Default" 
                         component={HomeStack}
                     />
                     <Drawer.Screen
