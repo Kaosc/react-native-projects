@@ -10,9 +10,13 @@ const Drawer = createDrawerNavigator();
 export default function DrawerNavigator() {
     return (
         <NavigationContainer>
-            <Drawer.Navigator screenOptions={{headerShown: false, swipeEnabled: false, }}>
-                <Drawer.Group>
-                    <Drawer.Screen
+            <Drawer.Navigator screenOptions={{
+                headerShown: false, 
+                swipeEnabled: false, 
+                drawerActiveTintColor: 'white',
+                drawerInactiveTintColor: '#363636',
+                drawerStyle: {backgroundColor: 'black'}}}>
+                    <Drawer.Screen 
                         name="Home" 
                         component={HomeStack}
                     />
@@ -20,7 +24,6 @@ export default function DrawerNavigator() {
                         name="About" 
                         component={AboutStack}
                     />
-                </Drawer.Group>
             </Drawer.Navigator>
         </NavigationContainer>
     )

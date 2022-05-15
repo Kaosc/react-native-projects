@@ -6,13 +6,21 @@ import Header from '../shared/Header';
 
 const Stack = createStackNavigator();
 
+const tabStyle = {
+    marginLeft: 0, 
+    marginRight: 0, 
+    maxWidth: '100%'
+} 
+
 export default function AboutStack() {
     return (
         <Stack.Navigator>
             <Stack.Group>
                 <Stack.Screen 
                     options={({ navigation }) => {
-                        return {headerTitle: () => <Header navigation={navigation} titleName='About'/>}
+                        return {
+                            headerTitleContainerStyle: tabStyle, 
+                            headerTitle: () => <Header navigation={navigation} titleName='About'/>}
                     }}
                     name="About" 
                     component={About}

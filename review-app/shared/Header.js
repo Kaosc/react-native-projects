@@ -19,12 +19,12 @@ export default function Header({ navigation, titleName }) {
 }
 
 const styles = StyleSheet.create({
-
     header: {
       width: '100%',
       height: '100%',
       flexDirection: 'row',
       alignItems: 'center',
+      backgroundColor: 'black'
     },
 
     headerText: {
@@ -33,11 +33,13 @@ const styles = StyleSheet.create({
       letterSpacing: 1,
       paddingLeft: 45,
       paddingBottom: 2,
+      color: 'white'
     },
 
     icon: {
-      fontSize: 30,
-      color:"black",
+      fontSize: 27,
+      paddingLeft: 9,
+      color: 'white',
       position: 'absolute',
       zIndex: 3,
     }
